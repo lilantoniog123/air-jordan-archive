@@ -1,0 +1,431 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #090909;
+    color: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* HEADER */
+
+.site-header {
+    min-height: 76px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #262626;
+}
+
+.logo {
+    font-size: 17px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.logo span,
+.hero h1 span,
+.about-section h2 span {
+    color: #e32636;
+}
+
+.site-header nav {
+    display: flex;
+    gap: 32px;
+}
+
+.site-header nav a {
+    color: #c7c7c7;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    transition: color .2s ease;
+}
+
+.site-header nav a:hover,
+.hero-link:hover {
+    color: #e32636;
+}
+
+/* HERO */
+
+.eyebrow {
+    color: #e32636;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.hero {
+    min-height: 470px;
+    padding: 105px 9% 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background: radial-gradient(
+        ellipse at 80% 45%,
+        rgba(130,20,30,.18),
+        transparent 42%
+    ), #090909;
+}
+
+.hero h1 {
+    margin-top: 18px;
+    font-size: clamp(48px, 8vw, 94px);
+    line-height: .94;
+    letter-spacing: -4px;
+    font-weight: 900;
+}
+
+.hero-description {
+    max-width: 440px;
+    margin-top: 24px;
+    color: #aaa;
+    font-size: 15px;
+}
+
+.hero-link {
+    margin-top: 30px;
+    color: #f4f4f4;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.hero-link span {
+    margin-left: 10px;
+    color: #e32636;
+}
+
+/* ARCHIVE */
+
+.archive-section {
+    padding: 75px 7% 85px;
+    background: #101010;
+}
+
+.section-heading {
+    margin-bottom: 42px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.section-heading h2,
+.about-section h2 {
+    margin-top: 8px;
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1;
+    letter-spacing: -1.5px;
+}
+
+.collection-count {
+    color: #888;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+/* TWO-COLUMN LAYOUT */
+
+.archive-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
+    gap: 6%;
+    align-items: start;
+}
+
+.shoe-column {
+    min-width: 0;
+}
+
+.shoe-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.model-counter {
+    color: #777;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.shoe-column h3 {
+    margin: 8px 0 18px;
+    font-size: clamp(25px, 3vw, 38px);
+    letter-spacing: -1px;
+}
+
+/* AUTOMATIC SHOE SIZING DISPLAY */
+
+.shoe-visual {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #181818;
+    border: 1px solid #292929;
+}
+
+.shoe-visual canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#imagePlaceholder {
+    display: none;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #888;
+    font-size: 13px;
+    text-align: center;
+}
+
+/* SHOE DETAILS */
+
+.shoe-information {
+    min-width: 0;
+    padding-top: 48px;
+}
+
+.detail-list {
+    margin-top: 22px;
+    border-top: 1px solid #333;
+}
+
+.detail-row {
+    min-height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-bottom: 1px solid #333;
+}
+
+.detail-label {
+    flex-shrink: 0;
+    color: #888;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.detail-value {
+    color: #f1f1f1;
+    font-size: 13px;
+    text-align: right;
+}
+
+/* HISTORY DESCRIPTION */
+
+.shoe-history {
+    margin-top: 38px;
+}
+
+.shoe-history > p:last-child {
+    margin-top: 14px;
+    max-width: 590px;
+    color: #b7b7b7;
+    font-size: 14px;
+    line-height: 1.85;
+}
+
+/* FULL-WIDTH TIMELINE AT THE BOTTOM */
+
+.timeline-controls {
+    width: 100%;
+    margin-top: 75px;
+    padding-top: 30px;
+    border-top: 1px solid #333;
+}
+
+.timeline-heading {
+    margin-bottom: 24px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.timeline-heading h3 {
+    margin-top: 3px;
+    color: #fff;
+    font-size: clamp(34px, 5vw, 48px);
+    line-height: 1;
+}
+
+.timeline-model-count {
+    color: #888;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+}
+
+.timeline-model-count span {
+    color: #e32636;
+}
+
+#modelSlider {
+    display: block;
+    width: 100%;
+    height: 6px;
+    margin: 0;
+    accent-color: #e32636;
+    cursor: pointer;
+}
+
+.timeline-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 13px;
+    color: #777;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.timeline-instruction {
+    margin-top: 20px;
+    color: #777;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+/* ABOUT */
+
+.about-section {
+    padding: 100px 9%;
+    background: #090909;
+}
+
+.about-section h2 {
+    margin-top: 16px;
+    font-size: clamp(38px, 6vw, 65px);
+}
+
+.about-section > p:last-child {
+    max-width: 600px;
+    margin-top: 22px;
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 25px 7%;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #292929;
+    color: #777;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+/* MOBILE */
+
+@media (max-width: 760px) {
+    .site-header {
+        padding: 0 5%;
+    }
+
+    .site-header nav {
+        gap: 15px;
+    }
+
+    .site-header nav a {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .hero {
+        min-height: 390px;
+        padding: 80px 7%;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .archive-section {
+        padding: 55px 6% 65px;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    .archive-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .shoe-information {
+        padding-top: 15px;
+    }
+
+    .timeline-controls {
+        margin-top: 55px;
+    }
+
+    .detail-row {
+        min-height: 54px;
+    }
+
+    .detail-value {
+        font-size: 12px;
+    }
+
+    .about-section {
+        padding: 75px 7%;
+    }
+}
+
+@media (max-width: 420px) {
+    .logo {
+        font-size: 14px;
+    }
+
+    .site-header nav {
+        gap: 10px;
+    }
+
+    .site-header nav a {
+        font-size: 8px;
+    }
+
+    .detail-label {
+        font-size: 9px;
+    }
+
+    .detail-value {
+        font-size: 11px;
+    }
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Jordan Archive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="logo" href="#home">JORDAN <span>ARCHIVE</span></a>
+        <nav aria-label="Main navigation">
+            <a href="#home">HOME</a>
+            <a href="#history">ARCHIVE</a>
+            <a href="#about">ABOUT</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <p class="eyebrow">1985 — 2025 / FORTY YEARS OF DESIGN</p>
+            <h1>THE AIR JORDAN<br><span>ARCHIVE.</span></h1>
+            <p class="hero-description">Explore the evolution of the Air Jordan signature sneaker, one model at a time.</p>
+            <a class="hero-link" href="#history">EXPLORE THE COLLECTION <span>↓</span></a>
+        </section>
+
+        <section class="archive-section" id="history">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">THE COLLECTION</p>
+                    <h2>THE ARCHIVE</h2>
+                </div>
+                <p class="collection-count">40 MODELS / 1985–2025</p>
+            </div>
+
+            <div class="archive-layout">
+                <div class="shoe-column">
+                    <div class="shoe-title-row">
+                        <p class="eyebrow">SELECTED MODEL</p>
+                        <span class="model-counter"><span id="currentModelNumber">01</span> / 40</span>
+                    </div>
+
+                    <h3 id="shoeName">AIR JORDAN I</h3>
+
+                    <div class="shoe-visual">
+                        <canvas id="shoeCanvas" role="img" aria-label="Air Jordan sneaker"></canvas>
+                        <div id="imagePlaceholder">Loading sneaker...</div>
+                    </div>
+                </div>
+
+                <div class="shoe-information">
+                    <p class="eyebrow">MODEL INFORMATION</p>
+
+                    <div class="detail-list">
+                        <div class="detail-row">
+                            <span class="detail-label">RELEASE YEAR</span>
+                            <span class="detail-value" id="releaseDate">April 1985</span>
+                        </div>
+
+                        <div class="detail-row">
+                            <span class="detail-label">ORIGINAL PRICE</span>
+                            <span class="detail-value" id="shoePrice">$65 USD</span>
+                        </div>
+
+                        <div class="detail-row">
+                            <span class="detail-label">DESIGNER</span>
+                            <span class="detail-value" id="shoeDesigner">Peter Moore</span>
+                        </div>
+                    </div>
+
+                    <div class="shoe-history">
+                        <p class="eyebrow">THE HISTORY</p>
+                        <p id="shoeDescription">The Air Jordan I launched alongside Michael Jordan's rookie season in 1985.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-controls">
+                <div class="timeline-heading">
+                    <div>
+                        <p class="eyebrow">EXPLORE THE YEARS</p>
+                        <h3 id="selectedYear">1985</h3>
+                    </div>
+
+                    <p class="timeline-model-count">
+                        MODEL <span id="timelineModelNumber">01</span> / 40
+                    </p>
+                </div>
+
+                <input
+                    type="range"
+                    id="modelSlider"
+                    min="1"
+                    max="40"
+                    value="1"
+                    step="1"
+                    aria-label="Select an Air Jordan model"
+                >
+
+                <div class="timeline-labels">
+                    <span>1985</span>
+                    <span>1995</span>
+                    <span>2005</span>
+                    <span>2015</span>
+                    <span>2025</span>
+                </div>
+
+                <p class="timeline-instruction">DRAG THE SLIDER TO EXPLORE ALL 40 MODELS</p>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+
+    <div class="about-content">
+
+        <p class="section-label">BEHIND THE COLLECTION</p>
+
+        <h2>
+            MORE THAN A<br>
+            BASKETBALL SHOE.
+        </h2>
+
+        <div class="about-description">
+
+            <p>
+                From its debut in 1985, the Air Jordan evolved beyond
+                performance footwear into a cultural symbol connected
+                to sport, fashion, identity, and design. Born from the
+                partnership between Michael Jordan and Nike, the
+                original Air Jordan I introduced a new approach to
+                basketball footwear, combining performance, distinctive
+                design, and the influence of one of the sport's most
+                recognizable rising stars.
+            </p>
+
+            <p>
+                As Michael Jordan's career progressed, so did the sneaker
+                line. Each new generation introduced changes in materials,
+                technology, construction, and visual identity, reflecting
+                the evolution of both basketball and footwear design.
+                What began as a signature basketball shoe gradually found
+                a place far beyond the court, becoming closely associated
+                with streetwear, music, fashion, and popular culture.
+            </p>
+
+            <p>
+                Over time, Air Jordan became more than a collection of
+                athletic shoes. It developed into a form of personal
+                expression, a symbol of cultural influence, and an
+                important part of sneaker history. Its designs connected
+                generations of athletes, collectors, and enthusiasts,
+                demonstrating how a product created for sport could
+                leave a lasting impression on the world of fashion
+                and design.
+            </p>
+
+            <p>
+                This collection explores that evolution through
+                40 mainline models, tracing four decades of innovation,
+                creativity, and cultural change. Each release represents
+                another chapter in the story of a sneaker line that
+                continually redefined what basketball footwear
+                could become.
+            </p>
+
+        </div>
+
+        <h3 class="about-ending">
+            40 MODELS. 4 DECADES. ONE EVOLVING LEGACY.
+        </h3>
+
+    </div>
+
+</section>
+
+    <footer>
+        <p>JORDAN ARCHIVE</p>
+        <p>1985 — 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
